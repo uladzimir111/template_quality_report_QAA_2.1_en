@@ -8,19 +8,19 @@
 ////////////////////////////////////////////////////////////////
 ///////////////ИНФОРМАЦИЯ ОТОБРАЖЕННАЯ НА ГРАФИКЕ///////////////
                 ['Module name', 'Defects'],
-                ["Module 2", 43],
-                ["Authorization", 42],
-                ["Module 7", 33],
-                ["Module 11", 31],
-                ["Module 5", 28],
-                ["Module 4", 24],
-                ["Module 6", 16],
-                ["Module 3", 15],
-                ["Module 10", 12],
-                ["Module 8", 9],
-                ["Module 9", 7],
-                ["Module 1", 7],
-                ["Socials", 6]
+                ["Chrome, Dashboard Total", 25],
+                ["Critical", 3],
+                ["Major", 3],
+                ["Firefox, Dashboart Total", 9],
+                ["Critical", 4],
+                ["Major", 2],
+                ["Chrome, Action Plans Total", 7],
+                ["Critical", 3],
+                ["Major", 3],
+                ["Firefox, Action Plans Total", 7],
+                ["Critical", 3],
+                ["Major", 3],
+                
 //////////////////////////////////////////////////////////////
             ]);
 
