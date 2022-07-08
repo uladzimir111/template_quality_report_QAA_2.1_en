@@ -575,9 +575,9 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td align="left" style="font-family:ALSShlange_reg,sans-serif;color:#231F20;font-size:14px;line-height:18px;font-weight: normal;text-align:justify">
-                                                                            Сначала <span style="font-family: ALSShlange_bld;font-weight: normal">чистота эксперимента</span>: описанный тест похож на Smoke, то есть основной функционал на валидных данных, значит необходимо убедиться, что и Паша и Антон тестируют приложение на изображениях на которых есть друзья, в противном случае искать их там нет смысла. Также предусловия: у обоих доступны и активны аккаунты в соц.сети, в аккаунтах соц.сети у каждого также есть в том числе и те друзья, которые изображены на изображениях используемых для теста; оба используют одно и то же тестовое окружение и шаги одинаковы. Если что-то из перечисленного неверно - исправить и повторить тест.<br>
-                                                                            То, что у Паши приложение работает как задумано, скорее всего говорит о том, что <span style="font-family: ALSShlange_bld;font-weight: normal">приложение в целом рабочее</span>, и остаётся выяснить почему оно работает с ошибкой у Антона. Изображение у Антона успешно постится в соц. сеть, значит с этим функционалом и доступом в соц.сеть проблем нет. Полагаю, что поиск друзей на изображении осуществляется с помощью AI. Для этого AI нужен доступ, например, к списку контактов Антона с их фотографиями для создания базы друзей. Есть ли у Антона контакты с фото и есть ли к ним доступ? Была ли создана база друзей с фото? Если да, есть ли у приложения доступ к этой базе? Разрешён ли доступ соц.сети/приложению к используемому для теста изображению?<br>
-                                                                            Поскольку не отмечается именно ни одного друга (а не только некоторые, или некоторые неверно распознались), то полагаю <span style="font-family: ALSShlange_bld;font-weight: normal">наиболее вероятен</span> блок на какой-то стадии работы программы, возможно это проблема с созданием базы, доступом к ней или доступом к изображению.
+                                                                            Описанный тест похож на <span style="font-family: ALSShlange_bld;font-weight: normal">Smoke</span>, то есть основной функционал на валидных данных. Соответственно, предусловия: у приложения есть доступ к контактам с фото для создания базы друзей, Паша и Антон тестируют приложение на изображениях на которых есть их друзья, у обоих доступны и активны аккаунты в соц.сети, в аккаунтах у каждого есть те друзья, которые есть на изображениях для теста; друзья не заблокировали Антона и приватные настройки их аккаунтов позволяют Антону отмечать их на фото, оба тестировщика используют одно и то же тестовое окружение и шаги одинаковы. Если что-то из перечисленного неверно - исправить и повторить тест.<br>
+                                                                            То, что у Паши приложение работает как задумано, скорее всего говорит о том, что <span style="font-family: ALSShlange_bld;font-weight: normal">приложение в целом рабочее</span>, и остаётся выяснить почему оно работает с ошибкой у Антона. Изображение у Антона успешно постится в соц. сеть, значит с этим функционалом и доступом в соц.сеть проблем нет.<br>
+                                                                            Поскольку у Антона не отмечается ни одного друга (а не некоторые, или друзья неверно распознались), то полагаю <span style="font-family: ALSShlange_bld;font-weight: normal">наиболее вероятен вариант</span> блока работы программы, например, в момент доступа к контактам для создания базы друзей (приложению не дали доступ к контактам, среди контактов нет друзей с тестового изображения и т.п.). Также возможен, но <span style="font-family: ALSShlange_bld;font-weight: normal">менее вероятен вариант</span>, что аккаунты друзей заблокировали Антона или изменили приватные настройки, и в итоге друзья на изображении распознаются, но не получается их отметить на чужих фото, но т.к. у Паши такой проблемы не было, то это вариант кажется маловероятен.
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -593,7 +593,7 @@
                                                                             <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%">
                                                                                 <tbody>
                                                                                     <tr>
-                                                                                        <td align="center" style="font-family:ALSShlange_reg,sans-serif;height:10px; line-height:123px;font-size:6px;font-weight: normal">&nbsp;
+                                                                                        <td align="center" style="font-family:ALSShlange_reg,sans-serif;height:10px; line-height:105px;font-size:6px;font-weight: normal">&nbsp;
 
                                                                                         </td>
                                                                                     </tr>
@@ -640,19 +640,118 @@
                                                             </table>
                                                             <!--PADDING END-->
                                                             
-                                                            <!--TXT-1-->
+                                                            <!--HEAD-->
                                                             <table align="center" border="0" cellpadding="0" cellspacing="0"  style="width: 800px">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td align="left" style="font-family:ALSShlange_reg,sans-serif;color:#231F20;font-size:14px;line-height:18px;font-weight: normal;text-align:justify">
-                                                                            Issue type: Summary: 
-                                                                            
+                                                                        <td align="left" style="font-family:ALSShlange_reg,sans-serif;color:#231F20;font-size:16px;line-height:20px;font-weight: normal;text-align:left">
+                                                                            <span style="font-family: ALSShlange_bld;font-weight: normal">Bug report</span>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
-                                                            <!--TXT-1 END-->
+                                                            <!--HEAD END-->
+                                                            <!--PADDING-->
+                                                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="center">
+
+                                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" style="font-family:ALSShlange_reg,sans-serif;height: 10px; line-height:10px;font-size:6px;font-weight: normal">&nbsp;
+
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--PADDING END-->
+                                                            <!--3COL-->
                                                             
+                                                            
+                                                            <!--3COL-->
+                                                            <table align="center" border="0" cellpadding="0" cellspacing="0"  style="width: 800px;border-collapse:collapse;font-size:0px;line-height:normal">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="center" valign="top">
+                                                                            <!--modulContent-->
+                                                                            <p id="M1"></p>
+                                                                            <table align="left" border="0" cellpadding="0" cellspacing="0"  style="width: 150px">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="left" style="font-family:ALSShlange_reg,sans-serif;color:#231F20;font-size:14px;line-height:22px;font-weight: normal;text-align:left">
+                                                                                            Project<br>
+                                                                                            Issue type<br>
+                                                                                            Summary<br>
+                                                                                            Severity<br>
+                                                                                            Priority<br>
+                                                                                            Created<br>
+                                                                                            Due date<br>
+                                                                                            Component<br>
+                                                                                            Affects version<br>
+                                                                                            Fix version<br>
+                                                                                            Assignee<br>
+                                                                                            Environment<br>
+                                                                                            Status<br>
+                                                                                            Resolution<br>
+                                                                                            Description<br><br><br><br><br><br><br><br><br>
+                                                                                            Result<br><br>
+                                                                                            Expected result<br><br>
+                                                                                            Attachment<br>
+                                                                                            
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            
+                                                                            <!--3-->
+                                                                            <table align="left" border="0" cellpadding="0" cellspacing="0"  style="width: 640px">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td align="left" style="font-family:ALSShlange_reg,sans-serif;color:#231F20;font-size:14px;line-height:22px;font-weight: normal;text-align:justify">
+                                                                                            FriendsApp<br>
+                                                                                            Bug<br>
+                                                                                            Auto-tag friends on an image: friends are not auto-tagged after sharing on facebook;<br>
+                                                                                            Critical/Blocker<br>
+                                                                                            Selected by manager<br>
+                                                                                            Jul 8, 2022<br>
+                                                                                            Jul 12, 2022<br>
+                                                                                            Component name<br>
+                                                                                            1.0<br>
+                                                                                            ...<br>
+                                                                                            Filled in by manager<br>
+                                                                                            macOS 12.0.1, Google Chrome 103<br>
+                                                                                            Open<br>
+                                                                                            ...<br>
+                                                                                            Contacts with photos are accessible by the FriendsApp; dedicated test-images and logged-in active test-accounts are used; FriendsApp is open<br>
+                                                                                            <span style="font-family: ALSShlange_bld;font-weight: normal">Steps:</span><br>
+                                                                                            1. Click "Share" button,<br>
+                                                                                            2. Chose image with friends to share on facebook,<br>
+                                                                                            3. Click "Upload",<br>
+                                                                                            4. Note that the image is uploaded to facebook,<br>
+                                                                                            5. Click "Tag friends",<br>
+                                                                                            6. Check that all friends are properly tagged,<br>
+                                                                                            Step 4. Image is uploaded to facebook,<br>
+                                                                                            Step 6. No friends from the test image are tagged,<br>
+                                                                                            Step 4. Image is uploaded to facebook,<br>
+                                                                                            Step 6. All friends from the test image are properly tagged,<br>
+                                                                                            [^NoPhotoTagged.MP4]
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <!--modulContent end-->
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--3COLL END-->
                                                             
                                                             <!--PADDING-->
                                                             <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%">
